@@ -49,7 +49,6 @@ export default function AppWithProviders() {
 function App() {
   const data = useLoaderData<typeof loader>();
   const [theme] = useTheme();
-  console.log(data, theme);
   // The component's JSX
   return (
     <html lang="en" className={clsx(theme)}>
@@ -68,7 +67,7 @@ function App() {
         {/* Links component for Remix-managed link tags */}
         <Links />
       </head>
-      <body className="h-screen bg-background text-primary">
+      <body className="h-screen bg-background text-primary font-bold font-sans antialiased">
         <Outlet />
 
         {/* ScrollRestoration component manages scroll position */}
